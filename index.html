@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+h1 {
+        color: #8ebf42;
+        text-align: center;
+        font-size: 48;
+}
+body {
+        background-color: #c4e9ef;
+      }
+ul {
+    color: #95852d;
+    font-size: 25;
+}
+h2{
+    color: #8ebf42;
+}
+p{
+    color: #95852d;
+    text-align: center;
+
+}
+h5{
+    color: #95852d;
+}
+
+</style>
+</head>
+<body>
+<h1>Schaefer Wiskur's Computer Science Portfolio Page</h1>
+<br>
+<p>
+    Welcome to my Computer Science Portfolio! I am a Freshman at Madonna University and a Computer Science major. I had some prior experience with HTML and CSS before starting the fall semester, but still new to coding. Over my first semester I took two different courses for my major, Computer Science 1 and Programming for Everyone 1. I have learned a lot of  new coding information involving Python and Django. I look forward to learning more about coding in the future!
+</p>
+<h2> Computer Science Classes Taken</h2>
+<ul>
+    <li> Computer Science 1 </li>
+    <li> Programming for Everyone </li>
+</ul>
+<br>
+<h2> Experience in:</h2>
+<ul>
+    {% for i in language %}
+    <li> {{i}} </li>
+    {% endfor %}
+</ul>
+
+
+<picture>
+    <img align = "right" src="https://www.lakemichigancollege.edu/sites/default/files/2018-02/CISBanner2048X1152.jpg" alt="Computer Science" width="500" height="600" ;>
+
+</picture>
+<br>
+<form action= "password">
+    <h2> Password Generator</h2>
+    <h5> Click the button below for a randomly generated 12 digit password!</h5>
+    <input  type="submit" value = "Generate Password">
+</form>
+
+
+</body>
+</html>
