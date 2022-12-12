@@ -16,9 +16,14 @@ ul {
 h2{
     color: #8ebf42;
 }
+
 p{
     color: #95852d;
-    text-align: center;
+    text-align : center;
+    border-width:5px;
+    border-style:solid;
+    border-color:#8ebf42;
+    padding: 1em;
 
 }
 h5{
@@ -31,7 +36,7 @@ h5{
 <h1>Schaefer Wiskur's Computer Science Portfolio Page</h1>
 <br>
 <p>
-    Welcome to my Computer Science Portfolio! I am a Freshman at Madonna University and a Computer Science major. I had some prior experience with HTML and CSS before starting the fall semester, but still new to coding. Over my first semester I took two different courses for my major, Computer Science 1 and Programming for Everyone 1. I have learned a lot of  new coding information involving Python and Django. I look forward to learning more about coding in the future!
+    Welcome to my Computer Science Portfolio! I am a Freshman at Madonna University and a Computer Science major. I had some prior experience with HTML and CSS before starting the fall semester as I had taken a Web Page Design class in high school, but am still new to coding. Over my first semester I took two different courses for my major, Computer Science 1 and Programming for Everyone 1. I have learned a lot of  new coding information involving Python and Django. I look forward to learning more about coding in the future! Below I list the classes I've taken in my Computer Science major, some languages I've used, and a button that will randomly generate a password for you!
 </p>
 <h2> Computer Science Classes Taken</h2>
 <ul>
@@ -39,7 +44,7 @@ h5{
     <li> Programming for Everyone </li>
 </ul>
 <br>
-<h2> Experience in:</h2>
+<h2> Experience with:</h2>
 <ul>
     {% for i in language %}
     <li> {{i}} </li>
@@ -52,10 +57,13 @@ h5{
 
 </picture>
 <br>
-<form action= "password">
+
+<form action= "password" target = "_blank">
     <h2> Password Generator</h2>
     <h5> Click the button below for a randomly generated 12 digit password!</h5>
-    <input  type="submit" value = "Generate Password">
+    <a href = "/password">
+        <button> Random Password </button>
+    </a>
 </form>
 
 
