@@ -1,19 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import random
+from .generator import random_password
 
 
 def index(request):
-    context = {"language": ['HTML', 'Python','Django']}
+    context = {"language": ['HTML', 'Python','Django', 'CSS']}
     return render(request, 'index.html', context)
 
 
 def password(request):
 
-    options = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*')
-    generated_password = ''
-    for x in range(12):
-        generated_password += random.choice(options)
 
-
-    return render(request, 'password.html', {'password': generated_password})
+    return HttpResponse(random_password())
